@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    min-height: 12vh;
+    min-width: 100%;
+    z-index: 10;
+    background: #0f1423;
+    border-bottom: 2px solid #0c2d48;
+}
+
+header .navigation .logo {
+    margin-left: 20px;
+}
+
+header .navigation .logo .h2 {
+    color: white;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+header .navigation .menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    margin: auto 20px auto 0;
+}
+
+header .navigation .humbarger {
+    margin-right: 20px;
+    display: none;
+}
+
+header .navigation .humbarger .bar {
+    width: 30px;
+    height: 2px;
+    margin: 7px;
+    background: #b1d4e0;
+}
+
+header .navigation .menu-list li a {
+    color: #b1d4e0;
+    font-size: 1 rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 1s ease, border 1s ease;
+    text-decoration: none;
+}
+
+
+/* landing-banner */
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: min(100vh, 600px);
+    background-color: #312e81;
+    margin: 2rem 0 2rem;
+    padding: 1rem;
+    /* border-radius: 20px; */
+    text-align: center;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+.banner:before {
+    position: absolute;
+    mix-blend-mode: overlay;
+    filter: brightness(70%);
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://media.istockphoto.com/vectors/padlock-with-keyhole-icon-in-personal-data-security-illustrates-cyber-vector-id1172944401?k=20&m=1172944401&s=612x612&w=0&h=HnD2_O3jZloA6ChuydJOxIlNQn_HI9x9O_eiSxQv15E=");
+    background-size: cover;
+    background-position: center;
+}
+
+.b-heading {
+    margin-top: 2rem;
+    color: white;
+}
+
+.b-heading {
+    position: relative;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.b-heading div {
+    color: #ddd6fe;
+}
+
+.text {
+    margin-top: 1rem;
+    font-size: clamp(1.3rem, 2vw, 4rem);
+    color: white;
+}
+
+.cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+.cta button {
+    border: none;
+    padding: 1rem 3rem;
+    font-size: clamp(1.1rem, 1.3vw, 3rem);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cta button:first-of-type {
+    background-color: white;
+    color: #4c1d95;
+    transition: all 300ms ease-in;
+}
+
+.cta button:first-of-type:hover {
+    background-color: #4c1d95;
+    color: white;
+}
+
+
+/* cards services */
+
+.services {
+    overflow-y: hidden;
+    margin: 3% 5%;
+}
+
+.service-text {
+    text-align: center;
+    position: relative;
+    font-weight: 750;
+    font-size: clamp(2.5rem, 3vw, 4rem);
+}
+
+.card-img {
+    height: 150px;
+    width: 100%;
+}
+
+.card {
+    margin: 6% 3%;
+}
+
+.card-content {
+    padding: 1% 5%;
+}
+
+.card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
+    height: 80px;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+
+.card::before {
+    transform-origin: left top;
+}
+
+.card::after {
+    transform-origin: right bottom;
+}
+
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+
+
+/* whyus-section */
+
+.y-us-section {
+    padding: 82px 0 82px;
+}
+
+.y-us-head {
+    text-align: center;
+    margin: 0 0 91px;
+}
+
+.y-us-title h2 {
+    color: #000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.y-us-title>p {
+    color: #777777;
+    line-height: 22px;
+}
+
+.y-us-title-border {
+    background: #4834d4 none repeat scroll 0 0;
+    border-radius: 2px;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    width: 50px;
+}
+
+.service-3 .service-box {
+    margin-bottom: 18px;
+}
+
+.service-3 .service-box .iconset {
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+
+.service-3 .service-box .iconset i {
+    color: #000;
+    font-size: 44px;
+}
+
+.service-3 .service-box .y-us-content {
+    float: left;
+    width: 75%;
+}
+
+.service-3 .service-box .y-us-content h4 {
+    color: #3a3a3a;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 14px 0 12px;
+    text-transform: uppercase;
+}
+
+.service-3 .service-box .y-us-content p {
+    color: #777777;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+
+/* testimonial sectionn */
+
+#testimonials {
+    text-align: center;
+    background-color: #4834d4;
+    background-image: linear-gradient(315deg, #0c0c0c 0%, #4834d4 74%);
+    color: white;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.testimonial-image {
+    border-radius: 200%;
+    width: 15%;
+    margin: 20px;
+}
+
+#press {
+    background-color: #ef8172;
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+.press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+
+/* pricing plansss */
+
+#pricing {
+    padding: 100px;
+    text-align: center;
+    /* background-color: #312e81;
+    background: url("https://media.istockphoto.com/vectors/padlock-with-keyhole-icon-in-personal-data-security-illustrates-cyber-vector-id1172944401?k=20&m=1172944401&s=612x612&w=0&h=HnD2_O3jZloA6ChuydJOxIlNQn_HI9x9O_eiSxQv15E="); */
+    background-color: #4834d4;
+    background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%);
+    background-size: cover;
+    background-position: center;
+}
+
+.price-title {
+    font-weight: bold;
+}
+
+.plan-head {
+    color: white;
+}
+
+.pricing-column {
+    padding: 3% 2%;
+}
+
+
+/* footer   */
+
+.footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+}
+
+.footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.footer-dark ul a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0;
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.footer-dark .item.social>a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+.footer-dark .item.social>a:hover {
+    opacity: 0.9;
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .cta {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    header .navigation .menu-list {
+        width: 60%;
+    }
+    header .navigation .menu-list li a {
+        font-size: 1rem;
+    }
+}
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+    header .navigation .menu-list {
+        position: absolute;
+        top: 12vh;
+        min-width: 100%;
+        background: rgba(15, 20, 35, 0.99);
+        text-align: center;
+        display: none;
+    }
+    header .navigation .menu-list li {
+        display: block;
+    }
+    header .navigation .menu-list li a {
+        display: block;
+        padding: 20px;
+        transition: color 1s ease, padding 1s ease, background-color 1s ease;
+    }
+    header .navigation .menu-list li a:hover {
+        color: #b1d4e0;
+        padding-left: 30px;
+        background: rgba(177, 212, 224, 0.2);
+    }
+    header .navigation .humbarger {
+        display: block;
+    }
+}
